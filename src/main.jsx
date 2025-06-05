@@ -9,20 +9,21 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   </React.StrictMode>
 );
 
-// Přidání animací při scrollování – vypnuto pro malé obrazovky
+// Detekce mobilního zařízení (šířka nebo user agent)
+const isMobile = window.innerWidth < 768 || /Mobi|Android/i.test(navigator.userAgent);
+
 window.addEventListener('load', () => {
-  const isMobile = window.innerWidth < 768;
+  const sections = document.querySelectorAll('section.opacity-0');
 
   if (isMobile) {
-    // Na mobilu odstraníme opacity, aby se vše zobrazilo hned bez animace
-    document.querySelectorAll('section.opacity-0').forEach(el => {
-      el.classList.remove('opacity-0');
+    sections.forEach(el => {
+      el.classList.remove('opacity-0'); // Zajistí zobrazení bez animace
     });
-    console.log("Animace vypnuty – zobrazení ihned (mobilní zařízení).");
+    console.log("Animace jsou na mobilu deaktivovány.");
     return;
   }
 
-  // Na desktopu aktivujeme animace při scrollování
+  // Desktop – přidání animací pomocí IntersectionObserver
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach(entry => {
@@ -36,9 +37,9 @@ window.addEventListener('load', () => {
     { threshold: 0.1 }
   );
 
-  document.querySelectorAll('section.opacity-0').forEach(el => {
+  sections.forEach(el => {
     observer.observe(el);
   });
 
-  console.log("Observer aktivní – sleduje sekce (desktop).");
+  console.log("Animace aktivní – desktop režim.");
 });
