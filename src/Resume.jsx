@@ -1,6 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export default function Resume() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-fade-in-scroll");
+          } else {
+            entry.target.classList.remove("animate-fade-in-scroll");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll("section.opacity-0").forEach((el) => {
+      observer.observe(el);
+    });
+
+    console.log("Observer aktivní – sleduje sekce opakovaně.");
+
+    return () => observer.disconnect(); // cleanup
+  }, []);
+
   return (
     <main className="max-w-4xl mx-auto p-6 space-y-20 animate-fade-in">
        {/* Header */}

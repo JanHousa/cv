@@ -16,3 +16,9 @@
 .animate-fade-in-scroll {
   animation: fade-in-scroll 0.8s ease-out forwards;
 }
+
+@media (max-width: 768px) {
+  section.opacity-0 {
+    opacity: 1 !important;
+  }
+}
