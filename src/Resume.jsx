@@ -36,7 +36,15 @@ export default function Resume() {
         <div className="flex-1 text-center sm:text-left">
           <h1 className="text-4xl font-bold text-blue-900">Jan Housa</h1>
           <p className="text-lg text-gray-700">Turnov | 19 let</p>
-          <p className="text-sm text-gray-600 mb-1">📞 608 268 813 | ✉️ honzahousa@gmail.com</p>
+          <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 text-sm text-gray-600 mb-1">
+            <p>📞 608 268 813</p>
+            <a
+              href="mailto:honzahousa@gmail.com"
+              className="text-blue-700 hover:underline"
+            >
+              ✉️ honzahousa@gmail.com
+            </a>
+          </div>
           <p className="text-sm text-gray-800 max-w-md">
             Nadšený mladý vývojář se zájmem o tvorbu multiplatformních aplikací. Rád se učím nové technologie a baví mě celý životní cyklus vývoje – od návrhu a programování přes testování a ladění až po nasazení a prezentaci projektu. Během studia na střední škole jsem si oblíbil .NET ekosystém pro jeho univerzálnost a široké možnosti využití.
           </p>
