@@ -23,3 +23,15 @@
     opacity: 1 !important;
   }
 }
+
+@media print {
+  section {
+    opacity: 1 !important;
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .animate-fade-in-scroll {
+    animation: none !important;
+  }
+}
