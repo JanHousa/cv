@@ -119,6 +119,7 @@ export default function Resume() {
           <li>Práce s databázemi a SQL (návrh struktury, psaní dotazů, manipulace s daty)</li>
           <li>Základní znalost cloudových službeb Microsoft Azure</li>
           <li>Microsoft Office aplikace, zejména Excel (včetně maker a vzorců)</li>
+          <li>Úprava fotografií, tvorba grafiky a edit videa (Adobe Photoshop, DaVinci Resolve)</li>
         </ul>
       </section>
 
