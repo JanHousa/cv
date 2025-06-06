@@ -144,7 +144,7 @@ export default function Resume() {
       </section>
 
       {/* Projects */}
-      <section className="opacity-0">
+      <section className="opacity-0 print:hidden">
         <h2 className="text-2xl font-semibold border-b pb-1 mb-4 hover:text-blue-600 transition-colors duration-300">Projekty</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer" onClick={() => window.open("https://github.com/JanHousa/MP2025-Housa-Jan-P4A", "_blank")}>
