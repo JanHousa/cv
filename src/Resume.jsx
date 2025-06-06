@@ -48,7 +48,7 @@ export default function Resume() {
           <p className="text-sm text-gray-800 max-w-md">
             Nadšený mladý vývojář se zájmem o tvorbu multiplatformních aplikací. Rád se učím nové technologie a baví mě celý životní cyklus vývoje – od návrhu a programování přes testování a ladění až po nasazení a prezentaci projektu. Během studia na střední škole jsem si oblíbil .NET ekosystém pro jeho univerzálnost a široké možnosti využití.
           </p>
-          <div className="flex justify-center sm:justify-start mt-4 space-x-4 print:hidden">
+          <div className="flex justify-center sm:justify-start mt-4 space-x-4">
             <a href="https://github.com/JanHousa" target="_blank" rel="noopener noreferrer">
               <img src="/github-icon.png" alt="GitHub" className="w-6 h-6 hover:scale-110 transition-transform" />
             </a>
